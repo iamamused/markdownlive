@@ -33,6 +33,7 @@ NSString	*kMarkdownDocumentType = @"MarkdownDocumentType";
 		md = [md stringByAppendingFormat:@"<style>\n%@\n</style>\n\n", [NSString stringWithContentsOfFile:filePath]];
 	}
 	
+	md = [md stringByAppendingString:markdown_];
 	
     return discountToHTML(md);
 }

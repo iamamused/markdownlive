@@ -21,8 +21,21 @@
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
 		DD0CF70012785E4B008EDD59 /* bundle_github.css in Resources */ = {isa = PBXBuildFile; fileRef = DD0CF6FE12785E4B008EDD59 /* bundle_github.css */; };
 		DD0CF70112785E4B008EDD59 /* bundle_common.css in Resources */ = {isa = PBXBuildFile; fileRef = DD0CF6FF12785E4B008EDD59 /* bundle_common.css */; };
-		DD0CF792127863EA008EDD59 /* markdown.c in Sources */ = {isa = PBXBuildFile; fileRef = DD0CF790127863EA008EDD59 /* markdown.c */; };
-		DD0CF793127863EA008EDD59 /* mkdio.c in Sources */ = {isa = PBXBuildFile; fileRef = DD0CF791127863EA008EDD59 /* mkdio.c */; };
+		DD0CF7A8127865FF008EDD59 /* basename.c in Sources */ = {isa = PBXBuildFile; fileRef = DD0CF796127865FF008EDD59 /* basename.c */; };
+		DD0CF7A9127865FF008EDD59 /* Csio.c in Sources */ = {isa = PBXBuildFile; fileRef = DD0CF797127865FF008EDD59 /* Csio.c */; };
+		DD0CF7AA127865FF008EDD59 /* css.c in Sources */ = {isa = PBXBuildFile; fileRef = DD0CF798127865FF008EDD59 /* css.c */; };
+		DD0CF7AB127865FF008EDD59 /* docheader.c in Sources */ = {isa = PBXBuildFile; fileRef = DD0CF799127865FF008EDD59 /* docheader.c */; };
+		DD0CF7AC127865FF008EDD59 /* dumptree.c in Sources */ = {isa = PBXBuildFile; fileRef = DD0CF79A127865FF008EDD59 /* dumptree.c */; };
+		DD0CF7AD127865FF008EDD59 /* emmatch.c in Sources */ = {isa = PBXBuildFile; fileRef = DD0CF79B127865FF008EDD59 /* emmatch.c */; };
+		DD0CF7AE127865FF008EDD59 /* generate.c in Sources */ = {isa = PBXBuildFile; fileRef = DD0CF79C127865FF008EDD59 /* generate.c */; };
+		DD0CF7AF127865FF008EDD59 /* html5.c in Sources */ = {isa = PBXBuildFile; fileRef = DD0CF79D127865FF008EDD59 /* html5.c */; };
+		DD0CF7B1127865FF008EDD59 /* markdown.c in Sources */ = {isa = PBXBuildFile; fileRef = DD0CF79F127865FF008EDD59 /* markdown.c */; };
+		DD0CF7B3127865FF008EDD59 /* mkdio.c in Sources */ = {isa = PBXBuildFile; fileRef = DD0CF7A1127865FF008EDD59 /* mkdio.c */; };
+		DD0CF7B4127865FF008EDD59 /* resource.c in Sources */ = {isa = PBXBuildFile; fileRef = DD0CF7A2127865FF008EDD59 /* resource.c */; };
+		DD0CF7B5127865FF008EDD59 /* tags.c in Sources */ = {isa = PBXBuildFile; fileRef = DD0CF7A3127865FF008EDD59 /* tags.c */; };
+		DD0CF7B7127865FF008EDD59 /* toc.c in Sources */ = {isa = PBXBuildFile; fileRef = DD0CF7A5127865FF008EDD59 /* toc.c */; };
+		DD0CF7B8127865FF008EDD59 /* xml.c in Sources */ = {isa = PBXBuildFile; fileRef = DD0CF7A6127865FF008EDD59 /* xml.c */; };
+		DD0CF7B9127865FF008EDD59 /* xmlpage.c in Sources */ = {isa = PBXBuildFile; fileRef = DD0CF7A7127865FF008EDD59 /* xmlpage.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,8 +63,21 @@
 		8D15AC370486D014006FF6A4 /* MarkdownLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkdownLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD0CF6FE12785E4B008EDD59 /* bundle_github.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = bundle_github.css; path = css/bundle_github.css; sourceTree = "<group>"; };
 		DD0CF6FF12785E4B008EDD59 /* bundle_common.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = bundle_common.css; path = css/bundle_common.css; sourceTree = "<group>"; };
-		DD0CF790127863EA008EDD59 /* markdown.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = markdown.c; path = "discount-2.0.1/markdown.c"; sourceTree = "<group>"; };
-		DD0CF791127863EA008EDD59 /* mkdio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mkdio.c; path = "discount-2.0.1/mkdio.c"; sourceTree = "<group>"; };
+		DD0CF796127865FF008EDD59 /* basename.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = basename.c; path = discount/basename.c; sourceTree = "<group>"; };
+		DD0CF797127865FF008EDD59 /* Csio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Csio.c; path = discount/Csio.c; sourceTree = "<group>"; };
+		DD0CF798127865FF008EDD59 /* css.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = css.c; path = discount/css.c; sourceTree = "<group>"; };
+		DD0CF799127865FF008EDD59 /* docheader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = docheader.c; path = discount/docheader.c; sourceTree = "<group>"; };
+		DD0CF79A127865FF008EDD59 /* dumptree.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dumptree.c; path = discount/dumptree.c; sourceTree = "<group>"; };
+		DD0CF79B127865FF008EDD59 /* emmatch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = emmatch.c; path = discount/emmatch.c; sourceTree = "<group>"; };
+		DD0CF79C127865FF008EDD59 /* generate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = generate.c; path = discount/generate.c; sourceTree = "<group>"; };
+		DD0CF79D127865FF008EDD59 /* html5.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = html5.c; path = discount/html5.c; sourceTree = "<group>"; };
+		DD0CF79F127865FF008EDD59 /* markdown.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = markdown.c; path = discount/markdown.c; sourceTree = "<group>"; };
+		DD0CF7A1127865FF008EDD59 /* mkdio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mkdio.c; path = discount/mkdio.c; sourceTree = "<group>"; };
+		DD0CF7A2127865FF008EDD59 /* resource.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = resource.c; path = discount/resource.c; sourceTree = "<group>"; };
+		DD0CF7A3127865FF008EDD59 /* tags.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tags.c; path = discount/tags.c; sourceTree = "<group>"; };
+		DD0CF7A5127865FF008EDD59 /* toc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = toc.c; path = discount/toc.c; sourceTree = "<group>"; };
+		DD0CF7A6127865FF008EDD59 /* xml.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xml.c; path = discount/xml.c; sourceTree = "<group>"; };
+		DD0CF7A7127865FF008EDD59 /* xmlpage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xmlpage.c; path = discount/xmlpage.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,8 +200,21 @@
 		DD0CF71F127860AC008EDD59 /* discount */ = {
 			isa = PBXGroup;
 			children = (
-				DD0CF790127863EA008EDD59 /* markdown.c */,
-				DD0CF791127863EA008EDD59 /* mkdio.c */,
+				DD0CF796127865FF008EDD59 /* basename.c */,
+				DD0CF797127865FF008EDD59 /* Csio.c */,
+				DD0CF798127865FF008EDD59 /* css.c */,
+				DD0CF799127865FF008EDD59 /* docheader.c */,
+				DD0CF79A127865FF008EDD59 /* dumptree.c */,
+				DD0CF79B127865FF008EDD59 /* emmatch.c */,
+				DD0CF79C127865FF008EDD59 /* generate.c */,
+				DD0CF79D127865FF008EDD59 /* html5.c */,
+				DD0CF79F127865FF008EDD59 /* markdown.c */,
+				DD0CF7A1127865FF008EDD59 /* mkdio.c */,
+				DD0CF7A2127865FF008EDD59 /* resource.c */,
+				DD0CF7A3127865FF008EDD59 /* tags.c */,
+				DD0CF7A5127865FF008EDD59 /* toc.c */,
+				DD0CF7A6127865FF008EDD59 /* xml.c */,
+				DD0CF7A7127865FF008EDD59 /* xmlpage.c */,
 			);
 			name = discount;
 			sourceTree = "<group>";
@@ -252,8 +291,21 @@
 				795F6DBA105D75D300D1F90A /* discountWrapper.m in Sources */,
 				795F6DBB105D75D300D1F90A /* markdownWrapper.c in Sources */,
 				795F6DBC105D75D300D1F90A /* mkdioWrapper.c in Sources */,
-				DD0CF792127863EA008EDD59 /* markdown.c in Sources */,
-				DD0CF793127863EA008EDD59 /* mkdio.c in Sources */,
+				DD0CF7A8127865FF008EDD59 /* basename.c in Sources */,
+				DD0CF7A9127865FF008EDD59 /* Csio.c in Sources */,
+				DD0CF7AA127865FF008EDD59 /* css.c in Sources */,
+				DD0CF7AB127865FF008EDD59 /* docheader.c in Sources */,
+				DD0CF7AC127865FF008EDD59 /* dumptree.c in Sources */,
+				DD0CF7AD127865FF008EDD59 /* emmatch.c in Sources */,
+				DD0CF7AE127865FF008EDD59 /* generate.c in Sources */,
+				DD0CF7AF127865FF008EDD59 /* html5.c in Sources */,
+				DD0CF7B1127865FF008EDD59 /* markdown.c in Sources */,
+				DD0CF7B3127865FF008EDD59 /* mkdio.c in Sources */,
+				DD0CF7B4127865FF008EDD59 /* resource.c in Sources */,
+				DD0CF7B5127865FF008EDD59 /* tags.c in Sources */,
+				DD0CF7B7127865FF008EDD59 /* toc.c in Sources */,
+				DD0CF7B8127865FF008EDD59 /* xml.c in Sources */,
+				DD0CF7B9127865FF008EDD59 /* xmlpage.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +389,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/discount-2.0.1\"";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/discount\"";
 			};
 			name = Debug;
 		};
@@ -350,7 +402,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/discount-2.0.1\"";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/discount\"";
 			};
 			name = Release;
 		};

@@ -11,6 +11,8 @@
 @interface MyDocument : NSDocument {
 	IBOutlet	NSTextView					*markdownSourceTextView;
 	IBOutlet	WebView						*htmlPreviewWebView;
+	IBOutlet	NSToolbar					*toolbar;
+	IBOutlet	NSToolbarItem				*commitButton;
 	
 				NSMutableAttributedString	*markdownSource;
 	

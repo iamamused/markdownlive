@@ -19,8 +19,22 @@ NSString	*kMarkdownDocumentType = @"MarkdownDocumentType";
 - (NSString*)markdown2html:(NSString*)markdown_ {
 	if (!markdown_)
 		return @"";
-    
-    return discountToHTML(markdown_);
+	
+    NSString *md = @"";
+	NSString *filePath;
+	
+	filePath = [[NSBundle mainBundle] pathForResource:@"bundle_common" ofType:@"css"];
+	if (filePath) {
+		md = [md stringByAppendingFormat:@"<style>\n%@\n</style>\n\n", [NSString stringWithContentsOfFile:filePath]];
+	}
+
+	filePath = [[NSBundle mainBundle] pathForResource:@"bundle_github" ofType:@"css"];
+	if (filePath) {
+		md = [md stringByAppendingFormat:@"<style>\n%@\n</style>\n\n", [NSString stringWithContentsOfFile:filePath]];
+	}
+	
+	
+    return discountToHTML(md);
 }
 
 - (id)init {

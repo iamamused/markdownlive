@@ -20,22 +20,29 @@ NSString	*kMarkdownDocumentType = @"MarkdownDocumentType";
 	if (!markdown_)
 		return @"";
 	
-    NSString *md = @"";
 	NSString *filePath;
-	
+/*	
 	filePath = [[NSBundle mainBundle] pathForResource:@"bundle_common" ofType:@"css"];
 	if (filePath) {
-		md = [md stringByAppendingFormat:@"<style>\n%@\n</style>\n\n", [NSString stringWithContentsOfFile:filePath]];
+		html = [html stringByAppendingFormat:@"<style>\n%@\n</style>\n\n", [NSString stringWithContentsOfFile:filePath]];
 	}
 
 	filePath = [[NSBundle mainBundle] pathForResource:@"bundle_github" ofType:@"css"];
 	if (filePath) {
-		md = [md stringByAppendingFormat:@"<style>\n%@\n</style>\n\n", [NSString stringWithContentsOfFile:filePath]];
+		html = [html stringByAppendingFormat:@"<style>\n%@\n</style>\n\n", [NSString stringWithContentsOfFile:filePath]];
 	}
+*/
 	
-	md = [md stringByAppendingString:markdown_];
+	NSString *format = @"%@";
+
+	filePath = [[NSBundle mainBundle] pathForResource:@"preview_wrapper" ofType:@"html"];
+	if (filePath) {
+		format = [NSString stringWithContentsOfFile:filePath];
+	}
+		
+	NSString *html = discountToHTML(markdown_);
 	
-    return discountToHTML(md);
+    return [NSString stringWithFormat:format, html];
 }
 
 - (id)init {

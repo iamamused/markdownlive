@@ -19,8 +19,7 @@
 		8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
-		DD0CF70012785E4B008EDD59 /* bundle_github.css in Resources */ = {isa = PBXBuildFile; fileRef = DD0CF6FE12785E4B008EDD59 /* bundle_github.css */; };
-		DD0CF70112785E4B008EDD59 /* bundle_common.css in Resources */ = {isa = PBXBuildFile; fileRef = DD0CF6FF12785E4B008EDD59 /* bundle_common.css */; };
+		DD0CF70012785E4B008EDD59 /* preview_wrapper.html in Resources */ = {isa = PBXBuildFile; fileRef = DD0CF6FE12785E4B008EDD59 /* preview_wrapper.html */; };
 		DD0CF7A8127865FF008EDD59 /* basename.c in Sources */ = {isa = PBXBuildFile; fileRef = DD0CF796127865FF008EDD59 /* basename.c */; };
 		DD0CF7A9127865FF008EDD59 /* Csio.c in Sources */ = {isa = PBXBuildFile; fileRef = DD0CF797127865FF008EDD59 /* Csio.c */; };
 		DD0CF7AA127865FF008EDD59 /* css.c in Sources */ = {isa = PBXBuildFile; fileRef = DD0CF798127865FF008EDD59 /* css.c */; };
@@ -61,8 +60,7 @@
 		795F6DB9105D75D300D1F90A /* mkdioWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mkdioWrapper.h; sourceTree = "<group>"; };
 		8D15AC360486D014006FF6A4 /* MarkdownLive-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MarkdownLive-Info.plist"; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* MarkdownLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkdownLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD0CF6FE12785E4B008EDD59 /* bundle_github.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = bundle_github.css; path = css/bundle_github.css; sourceTree = "<group>"; };
-		DD0CF6FF12785E4B008EDD59 /* bundle_common.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = bundle_common.css; path = css/bundle_common.css; sourceTree = "<group>"; };
+		DD0CF6FE12785E4B008EDD59 /* preview_wrapper.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = preview_wrapper.html; path = css/preview_wrapper.html; sourceTree = "<group>"; };
 		DD0CF796127865FF008EDD59 /* basename.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = basename.c; path = discount/basename.c; sourceTree = "<group>"; };
 		DD0CF797127865FF008EDD59 /* Csio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Csio.c; path = discount/Csio.c; sourceTree = "<group>"; };
 		DD0CF798127865FF008EDD59 /* css.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = css.c; path = discount/css.c; sourceTree = "<group>"; };
@@ -191,8 +189,7 @@
 		DD0CF70212785E51008EDD59 /* css */ = {
 			isa = PBXGroup;
 			children = (
-				DD0CF6FE12785E4B008EDD59 /* bundle_github.css */,
-				DD0CF6FF12785E4B008EDD59 /* bundle_common.css */,
+				DD0CF6FE12785E4B008EDD59 /* preview_wrapper.html */,
 			);
 			name = css;
 			sourceTree = "<group>";
@@ -274,8 +271,7 @@
 				1DDD582C0DA1D0D100B32029 /* MyDocument.xib in Resources */,
 				1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */,
 				795F6C87105D70A300D1F90A /* MarkdownLiveApp.icns in Resources */,
-				DD0CF70012785E4B008EDD59 /* bundle_github.css in Resources */,
-				DD0CF70112785E4B008EDD59 /* bundle_common.css in Resources */,
+				DD0CF70012785E4B008EDD59 /* preview_wrapper.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

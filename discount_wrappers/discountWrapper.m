@@ -31,6 +31,6 @@ NSString* discountToHTML(NSString *markdown) {
             mkd_cleanup_wrapper(document);
         }
     }
-    
+    NSLog(@"html: %@", result);
     return result;
 }

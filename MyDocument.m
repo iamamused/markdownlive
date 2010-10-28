@@ -58,12 +58,6 @@ NSString	*kMarkdownDocumentType = @"MarkdownDocumentType";
 														  userInfo:nil
 														   repeats:YES];
 		
-		//[[NSTask launchedTaskWithLaunchPath:@"/bin/ls" arguments:[NSArray array]] waitUntilExit];
-		
-		[[NSTask launchedTaskWithLaunchPath:@"/bin/sh"
-								  arguments:[NSArray arrayWithObjects:@"-c", @"ls", nil]]
-		 waitUntilExit];
-		
     }
     return self;
 }

@@ -57,9 +57,17 @@ NSString	*kMarkdownDocumentType = @"MarkdownDocumentType";
 														  selector:@selector(htmlPreviewTimer:)
 														  userInfo:nil
 														   repeats:YES];
+		
+		//[[NSTask launchedTaskWithLaunchPath:@"/bin/ls" arguments:[NSArray array]] waitUntilExit];
+		
+		[[NSTask launchedTaskWithLaunchPath:@"/bin/sh"
+								  arguments:[NSArray arrayWithObjects:@"-c", @"ls", nil]]
+		 waitUntilExit];
+		
     }
     return self;
 }
+
 
 - (void)dealloc {
 	[htmlPreviewTimer invalidate]; htmlPreviewTimer = nil;

@@ -35,7 +35,21 @@
 		DD0CF7B7127865FF008EDD59 /* toc.c in Sources */ = {isa = PBXBuildFile; fileRef = DD0CF7A5127865FF008EDD59 /* toc.c */; };
 		DD0CF7B8127865FF008EDD59 /* xml.c in Sources */ = {isa = PBXBuildFile; fileRef = DD0CF7A6127865FF008EDD59 /* xml.c */; };
 		DD0CF7B9127865FF008EDD59 /* xmlpage.c in Sources */ = {isa = PBXBuildFile; fileRef = DD0CF7A7127865FF008EDD59 /* xmlpage.c */; };
+		DDB0B2C51279FAA600790A01 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DDB0B2C41279FAA600790A01 /* Sparkle.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DDB0B2D51279FB2C00790A01 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DDB0B2C51279FAA600790A01 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -76,6 +90,7 @@
 		DD0CF7A5127865FF008EDD59 /* toc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = toc.c; path = discount/toc.c; sourceTree = "<group>"; };
 		DD0CF7A6127865FF008EDD59 /* xml.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xml.c; path = discount/xml.c; sourceTree = "<group>"; };
 		DD0CF7A7127865FF008EDD59 /* xmlpage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xmlpage.c; path = discount/xmlpage.c; sourceTree = "<group>"; };
+		DDB0B2C41279FAA600790A01 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +109,7 @@
 		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DDB0B2C41279FAA600790A01 /* Sparkle.framework */,
 				795F6CCC105D741100D1F90A /* WebKit.framework */,
 				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
 			);
@@ -226,6 +242,7 @@
 				8D15AC2B0486D014006FF6A4 /* Resources */,
 				8D15AC300486D014006FF6A4 /* Sources */,
 				8D15AC330486D014006FF6A4 /* Frameworks */,
+				DDB0B2D51279FB2C00790A01 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -348,6 +365,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -365,6 +386,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MarkdownLive_Prefix.pch;

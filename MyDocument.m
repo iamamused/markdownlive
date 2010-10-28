@@ -58,6 +58,14 @@ NSString	*kMarkdownDocumentType = @"MarkdownDocumentType";
 														  userInfo:nil
 														   repeats:YES];
 		
+		[[NSNotificationCenter defaultCenter] addObserver:self 
+												 selector:@selector(finishedCommit:) 
+													 name:NSTaskDidTerminateNotification 
+												   object:nil];
+		
+		commit = nil;
+		gitOut = [[NSPipe alloc] init];
+		
     }
     return self;
 }
@@ -155,6 +163,43 @@ NSString	*kMarkdownDocumentType = @"MarkdownDocumentType";
 - (IBAction)copyGeneratedHTMLAction:(id)sender {
 	[[NSPasteboard generalPasteboard] declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:nil];
 	[[NSPasteboard generalPasteboard] setString:[self markdown2html:[markdownSource string]] forType:NSStringPboardType];
+}
+
+- (IBAction)commitChanges:(id)sender;
+{
+	//http://cocoadevcentral.com/articles/000025.php
+	//http://github.com/pieter/gitx/blob/master/PBGitBinary.m
+	
+	NSLog(@"Commiting changes.");
+
+	commit=[[NSTask alloc] init];
+	[commit setLaunchPath:@"/usr/bin/git"];
+	
+	NSMutableArray *components = [NSMutableArray arrayWithArray:[[self fileURL] pathComponents]];
+	[components removeLastObject];
+	
+	NSLog(@"path: %@", [components componentsJoinedByString:@"/"]);
+	
+	[commit setCurrentDirectoryPath: [[components componentsJoinedByString:@"/"] stringByExpandingTildeInPath]];
+	
+	[commit setArguments:[NSArray arrayWithObjects:@"commit", [[[self fileURL] pathComponents] lastObject], @"-m",@"Commit Message",nil]];
+	
+	[commit setStandardOutput:gitOut];
+	
+	NSLog(@"Commit: %@", commit);
+	
+	[commit launch];
+}
+
+- (void)finishedCommit:(NSNotification *)aNotification {
+	
+	//NSData *output = [[gitOut fileHandleForReading] readDataToEndOfFile];
+	//NSString *string = [[[NSString alloc] initWithData: output encoding: NSUTF8StringEncoding] autorelease];
+	//NSLog(@"GITOUT:", string);
+
+	[commit release]; // Don't forget to clean up memory
+	commit=nil; // Just in case...
+
 }
 
 @end

@@ -22,8 +22,12 @@
 				BOOL						hasSavedOrigin;
 				NSPoint						savedOrigin;
 				BOOL						savedAtBottom;
+	
+				NSTask						*commit;
+				NSPipe						*gitOut;
 }
 
 - (IBAction)copyGeneratedHTMLAction:(id)sender;
+- (IBAction)commitChanges:(id)sender;
 
 @end

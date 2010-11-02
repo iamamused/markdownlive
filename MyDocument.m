@@ -7,6 +7,7 @@
 
 #import "MyDocument.h"
 #include "discountWrapper.h"
+#include "GitCommitMessageSheet.h"
 
 NSString	*kMarkdownDocumentType = @"MarkdownDocumentType";
 
@@ -167,28 +168,35 @@ NSString	*kMarkdownDocumentType = @"MarkdownDocumentType";
 
 - (IBAction)commitChanges:(id)sender;
 {
+	[NSApp beginSheet:gitCommitMessageSheet modalForWindow:[self windowForSheet]
+        modalDelegate:self didEndSelector:NULL contextInfo:nil];	
+}
+
+- (IBAction)doCommit:(id)sender;
+{
+	
+	[gitCommitMessageSheet orderOut:nil];
+    [NSApp endSheet:gitCommitMessageSheet];
+	
+	NSLog(@"Commiting changes.");
+	
 	//http://cocoadevcentral.com/articles/000025.php
 	//http://github.com/pieter/gitx/blob/master/PBGitBinary.m
 	
-	NSLog(@"Commiting changes.");
-
 	commit=[[NSTask alloc] init];
 	[commit setLaunchPath:@"/usr/bin/git"];
 	
 	NSMutableArray *components = [NSMutableArray arrayWithArray:[[self fileURL] pathComponents]];
 	[components removeLastObject];
 	
-	NSLog(@"path: %@", [components componentsJoinedByString:@"/"]);
-	
 	[commit setCurrentDirectoryPath: [[components componentsJoinedByString:@"/"] stringByExpandingTildeInPath]];
 	
-	[commit setArguments:[NSArray arrayWithObjects:@"commit", [[[self fileURL] pathComponents] lastObject], @"-m",@"Commit Message",nil]];
+	[commit setArguments:[NSArray arrayWithObjects:@"commit", [[[self fileURL] pathComponents] lastObject], @"-m",[gitCommitMessageSheet.message stringValue],nil]];
 	
 	[commit setStandardOutput:gitOut];
 	
-	NSLog(@"Commit: %@", commit);
-	
 	[commit launch];
+	
 }
 
 - (void)finishedCommit:(NSNotification *)aNotification {

@@ -8,11 +8,15 @@
 #import <Cocoa/Cocoa.h>
 #import <WebKit/WebKit.h>
 
+@class GitCommitMessageSheet;
+
 @interface MyDocument : NSDocument {
 	IBOutlet	NSTextView					*markdownSourceTextView;
 	IBOutlet	WebView						*htmlPreviewWebView;
 	IBOutlet	NSToolbar					*toolbar;
 	IBOutlet	NSToolbarItem				*commitButton;
+	IBOutlet	GitCommitMessageSheet		*gitCommitMessageSheet;
+
 	
 				NSMutableAttributedString	*markdownSource;
 	
@@ -25,9 +29,13 @@
 	
 				NSTask						*commit;
 				NSPipe						*gitOut;
+	
+				
 }
 
 - (IBAction)copyGeneratedHTMLAction:(id)sender;
+
 - (IBAction)commitChanges:(id)sender;
+- (IBAction)doCommit:(id)sender;
 
 @end
